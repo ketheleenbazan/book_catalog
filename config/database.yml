@@ -16,5 +16,6 @@ test:
 
 production:
   <<: *default
-  # Heroku provides the DATABASE_URL env var automatically
-  url: <%= ENV['DATABASE_URL'] %>
+  url: <%= ENV["DATABASE_URL"] %>
+
+
