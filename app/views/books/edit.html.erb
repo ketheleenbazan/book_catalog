@@ -1,0 +1,13 @@
+<% content_for :title, "Editing book" %>
+
+<h1>Editing book</h1>
+
+<!-- reuse the form partial for editing -->
+<%= render "form", book: @book %>
+
+<br>
+
+<div>
+  <%= link_to "Show this book", @book %> |
+  <%= link_to "Back to books", books_path %>
+</div>

@@ -1,0 +1,7 @@
+<!--sent when a new user signs up -->
+<p>Welcome <%= @email %>!</p>
+
+<p>You can confirm your account email through the link below:</p>
+
+<!--link contains a secure token for account confirmation -->
+<p><%= link_to 'Confirm my account', confirmation_url(@resource, confirmation_token: @token) %></p>

@@ -1,0 +1,18 @@
+<div class="position-relative vh-100 overflow-hidden welcome-text">
+  <!-- Background image with transparency -->
+  <div class="position-absolute top-0 start-0 w-100 h-100" 
+       style="background-image: url(<%= asset_path 'library.jpg' %>); 
+              background-size: cover; 
+              background-position: center; 
+              opacity: 0.3;">
+  </div>
+
+  <!-- Text Content -->
+  <div class="position-absolute top-50 start-50 translate-middle text-center">
+    <h1 class="welcome-title">Welcome to the Book Catalog</h1>
+    <p class="welcome-subtext mt-3">
+      Please <%= link_to "log in", new_user_session_path, class: "fw-semibold" %> or 
+      <%= link_to "sign up", new_user_registration_path, class: "fw-semibold" %> to continue.
+    </p>
+  </div>
+</div>

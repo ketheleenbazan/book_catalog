@@ -1,0 +1,43 @@
+<!-- shared form partial used for both new and edit book views -->
+<%= form_with(model: book) do |form| %>
+  <% if book.errors.any? %>
+    <!-- Display validation errors if any -->
+    <div style="color: red">
+      <h2><%= pluralize(book.errors.count, "error") %> prohibited this book from being saved:</h2>
+      <ul>
+        <% book.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <!-- input for book title -->
+  <div>
+    <%= form.label :title, style: "display: block" %>
+    <%= form.text_field :title %>
+  </div>
+
+  <!--input for author -->
+  <div>
+    <%= form.label :author, style: "display: block" %>
+    <%= form.text_field :author %>
+  </div>
+
+  <!-- input for genre -->
+  <div>
+    <%= form.label :genre, style: "display: block" %>
+    <%= form.text_field :genre %>
+  </div>
+
+  <!-- input for published date -->
+  <div>
+    <%= form.label :published_on, style: "display: block" %>
+    <%= form.date_field :published_on %>
+  </div>
+
+  <!-- submit button -->
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

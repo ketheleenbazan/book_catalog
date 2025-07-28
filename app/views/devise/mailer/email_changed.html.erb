@@ -1,0 +1,12 @@
+<!--sent when a user updates their email address -->
+<p>Hello <%= @email %>!</p>
+
+<% if @resource.try(:unconfirmed_email?) %>
+  <!--iser has requested a change but not confirmed the new email yet -->
+  <p>We're contacting you to notify you that your email is being changed to 
+     <%= @resource.unconfirmed_email %>.</p>
+<% else %>
+  <!--email has already been updated -->
+  <p>We're contacting you to notify you that your email has been changed to 
+     <%= @resource.email %>.</p>
+<% end %>

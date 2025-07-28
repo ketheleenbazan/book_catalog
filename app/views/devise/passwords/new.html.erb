@@ -1,0 +1,20 @@
+<h2>Forgot your password?</h2>
+
+<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+  <!-- show error messages if the email is invalid -->
+  <%= render "devise/shared/error_messages", resource: resource %>
+
+  <!-- user enters their registered email -->
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  </div>
+
+  <!-- send reset link -->
+  <div class="actions">
+    <%= f.submit "Send me reset password instructions" %>
+  </div>
+<% end %>
+
+<!-- links for login, sign up, etc. -->
+<%= render "devise/shared/links" %>
