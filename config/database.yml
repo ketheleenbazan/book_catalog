@@ -1,6 +1,3 @@
-# PostgreSQL configuration for Rails
-# For Heroku, production uses DATABASE_URL automatically
-
 default: &default
   adapter: postgresql
   encoding: unicode
@@ -17,5 +14,3 @@ test:
 production:
   <<: *default
   url: <%= ENV["DATABASE_URL"] %>
-
-
