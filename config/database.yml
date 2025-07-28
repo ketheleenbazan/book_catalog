@@ -1,4 +1,3 @@
-# File: config/database.yml
 default: &default
   adapter: postgresql
   encoding: unicode
@@ -13,9 +12,16 @@ test:
   database: book_catalog_test
 
 production:
-  <<: *default
-  url: <%= ENV["DATABASE_URL"] %>
+  primary: &primary_production
+    <<: *default
+    url: <%= ENV["DATABASE_URL"] %>
+
+  # Reuse the same Heroku Postgres DB for queue, cable, and cache
+  queue:
+    <<: *primary_production
 
   cable:
-    <<: *default
-    url: <%= ENV["CABLE_DATABASE_URL"] || ENV["DATABASE_URL"] %>
+    <<: *primary_production
+
+  cache:
+    <<: *primary_production
