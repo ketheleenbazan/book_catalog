@@ -82,6 +82,10 @@
 
 source "https://rubygems.org"
 
+# specified Ruby version for Heroku
+ruby "3.3.4"
+
+
 # Authentication system (sign up, login, logout, password reset)
 gem "devise"
 
