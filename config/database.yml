@@ -1,3 +1,4 @@
+# File: config/database.yml
 default: &default
   adapter: postgresql
   encoding: unicode
@@ -14,3 +15,7 @@ test:
 production:
   <<: *default
   url: <%= ENV["DATABASE_URL"] %>
+
+  cable:
+    <<: *default
+    url: <%= ENV["CABLE_DATABASE_URL"] || ENV["DATABASE_URL"] %>
