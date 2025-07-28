@@ -122,7 +122,7 @@ gem "tzinfo-data", platforms: %i[ windows jruby ]
 # Rails background processing and caching tools (part of the new Rails 8 ecosystem)
 gem "solid_cache"
 gem "solid_queue"
-gem "solid_cable"
+
 
 # Speeds up boot times by caching (improves performance)
 gem "bootsnap", require: false
