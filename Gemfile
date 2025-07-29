@@ -19,7 +19,7 @@ gem "rails", "~> 8.0.1"
 gem "propshaft"
 
 # Database adapter for PostgreSQL (the database in use for this project)
-gem "pg", "~> 1.1"
+gem "pg", "~> 1.6"
 
 # Web server for Rails applications
 gem "puma", ">= 5.0"
