@@ -10,6 +10,8 @@ gem "devise"
 # Provides easy search and filtering for models (used for books search later)
 gem "ransack"
 
+gem "kaminari"
+
 # Rails framework (main framework for the application)
 gem "rails", "~> 8.0.1"
 

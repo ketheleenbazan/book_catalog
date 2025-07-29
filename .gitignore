@@ -2,3 +2,14 @@
 ai_files/
 *.ai
 *.codegpt
+
+
+# VSCode
+.vscode/
+.vscode-insiders/
+*.code-workspace
+
+# VSCode extensions cache
+.vscode-test/
+.vscode-server/
+.vscode-remote/
