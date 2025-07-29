@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-  include Kaminari::Helpers::HelperMethods #include Kaminari helpers
+  # include Kaminari::Helpers::HelperMethods #include Kaminari helpers
 
   #redirect after sign-in
   def after_sign_in_path_for(resource)
