@@ -4097,3 +4097,79 @@ Processing by BooksController#index as HTML
 Completed 200 OK in 28ms (Views: 3.5ms | ActiveRecord: 1.3ms (3 queries, 0 cached) | GC: 0.2ms)
 
 
+Started GET "/books" for ::1 at 2025-07-29 19:18:14 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='BookCatalog'*/[0m
+Processing by BooksController#index as HTML
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 2 ORDER BY "users"."id" ASC LIMIT 1 /*action='index',application='BookCatalog',controller='books'*/[0m
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (1.5ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."user_id" = 2 LIMIT 5 OFFSET 0 /*action='index',application='BookCatalog',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:39
+  [1m[36mBook Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "books" WHERE "books"."user_id" = 2 /*action='index',application='BookCatalog',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:59
+  Rendered books/index.html.erb within layouts/application (Duration: 12.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 14.4ms | GC: 0.0ms)
+Completed 200 OK in 122ms (Views: 15.1ms | ActiveRecord: 40.7ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books" for ::1 at 2025-07-29 19:18:15 +0100
+Processing by BooksController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 2 ORDER BY "users"."id" ASC LIMIT 1 /*action='index',application='BookCatalog',controller='books'*/[0m
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."user_id" = 2 LIMIT 5 OFFSET 0 /*action='index',application='BookCatalog',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:39
+  [1m[36mBook Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "books" WHERE "books"."user_id" = 2 /*action='index',application='BookCatalog',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:59
+  Rendered books/index.html.erb within layouts/application (Duration: 4.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.6ms | GC: 0.0ms)
+Completed 200 OK in 28ms (Views: 4.4ms | ActiveRecord: 1.1ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for ::1 at 2025-07-29 19:18:19 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.4ms | GC: 0.0ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 2 ORDER BY "users"."id" ASC LIMIT 1 /*action='home',application='BookCatalog',controller='pages'*/[0m
+  ↳ app/views/layouts/application.html.erb:67
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | GC: 0.0ms)
+Completed 200 OK in 25ms (Views: 3.4ms | ActiveRecord: 0.7ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  [1m[35mSQL (0.2ms)[0m  [1m[35mSET search_path TO public /*application='BookCatalog'*/[0m
+  [1m[35m (43.1ms)[0m  [1m[35mCREATE DATABASE "book_catalog_development" ENCODING = 'unicode' /*application='BookCatalog'*/[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[35mSET search_path TO public /*application='BookCatalog'*/[0m
+  [1m[35m (10.7ms)[0m  [1m[35mCREATE DATABASE "book_catalog_test" ENCODING = 'unicode' /*application='BookCatalog'*/[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7255544232824548605) /*application='BookCatalog'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='BookCatalog'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (6.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='BookCatalog'*/[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(7255544232824548605) /*application='BookCatalog'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='BookCatalog'*/[0m
+Started GET "/" for ::1 at 2025-07-29 19:44:16 +0100
+Started GET "/" for ::1 at 2025-07-29 19:44:16 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='BookCatalog'*/[0m
+  
+ActionController::RoutingError (No route matches [GET] "/"):
+  
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.7ms | GC: 0.0ms)
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 2 ORDER BY "users"."id" ASC LIMIT 1 /*action='home',application='BookCatalog',controller='pages'*/[0m
+  ↳ app/views/layouts/application.html.erb:67
+  Rendered layout layouts/application.html.erb (Duration: 97.1ms | GC: 1.1ms)
+Completed 200 OK in 221ms (Views: -6.5ms | ActiveRecord: 105.2ms (1 query, 0 cached) | GC: 9.7ms)
+
+
+Started GET "/" for ::1 at 2025-07-29 19:44:26 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.2ms | GC: 0.0ms)
+  [1m[36mUser Load (27.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 2 ORDER BY "users"."id" ASC LIMIT 1 /*action='home',application='BookCatalog',controller='pages'*/[0m
+  ↳ app/views/layouts/application.html.erb:67
+  Rendered layout layouts/application.html.erb (Duration: 31.3ms | GC: 0.0ms)
+Completed 200 OK in 59ms (Views: 3.6ms | ActiveRecord: 27.9ms (1 query, 0 cached) | GC: 0.0ms)
+
+

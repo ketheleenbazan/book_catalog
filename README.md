@@ -1,82 +1,95 @@
 # Book Catalog
 
-Book Catalog is a Ruby on Rails 8 web application designed to help individuals organize and manage their personal book collections.
-Users can register, securely log in, and build their own catalog of books with features like search, filtering, and pagination.
-The application is deployed on Heroku and uses PostgreSQL as the primary database.
+Book Catalog is a Ruby on Rails 8 web application designed to help individuals organize and manage their personal book collections.  
+Users can register, securely log in, and maintain their own private catalog of books with features like search, filtering, and pagination.  
+The application is deployed on **Heroku** and uses **PostgreSQL** as the primary database.
 
 ---
 
 ## Table of Contents
 
-- [Features](#features)  
-- [Technologies Used](#technologies-used)  
-- [Getting Started](#getting-started)  
-  - [Prerequisites](#prerequisites)  
-  - [Installation](#installation)  
-  - [Configuration](#configuration)  
-  - [Database Setup](#database-setup)  
-- [Running the Test Suite](#running-the-test-suite)  
-- [Deployment](#deployment)  
-- [Project Structure](#project-structure)  
-- [Contributing](#contributing)  
+- [Overview](#overview)
+- [Features](#features)
+- [Real-World Use Case](#real-world-use-case)
+- [Technologies Used](#technologies-used)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+  - [Configuration](#configuration)
+  - [Database Setup](#database-setup)
+- [Running the Test Suite](#running-the-test-suite)
+- [Deployment](#deployment)
+- [Project Structure](#project-structure)
+- [Contributing](#contributing)
 - [License](#license)
 
 ---
 
 ## Overview
 
-Book Catalog provides an intuitive way to manage your personal library online.
-It is built with Rails 8 and integrates authentication, filtering, and pagination to keep your collection easy to navigate and secure.
+Book Catalog provides an intuitive and secure way to manage your personal library online.  
+It is built with Rails 8 and integrates user authentication, flexible filtering, and clean pagination to keep collections easy to browse and maintain.  
 
-Each user has their own private catalog, ensuring that book collections remain personal and isolated. The application is fully responsive and works seamlessly on both desktop and mobile devices.
+- Each user has their own **private catalog** — you only see the books you add.  
+- The interface is fully **responsive**, working smoothly on desktop, tablet, and mobile.  
+- Designed for scalability and deployed to **Heroku**, with PostgreSQL ensuring reliability and performance.
 
 ---
 
 ## Features
 
-- User authentication (via Devise) for secure login/logout.
-- Full CRUD operations for managing books.
-- Filter books by title, author, or genre directly from the catalog page.
-- Pagination to neatly display books in groups of five per page.
-- Mobile-friendly design with Bootstrap 5.
-- PostgreSQL database for reliability and performance.
-- Solid Queue, Solid Cache, and Solid Cable gems included for scalability and real-time features.
+- **User Authentication**  
+  - Sign up, log in, and log out securely using Devise.  
+
+- **Book Management**  
+  - Add, edit, view, and delete books with attributes such as title, author, genre, and publication date.  
+
+- **Filtering**  
+  - Search books by **title**, **author**, or **genre** from the catalog page.  
+
+- **Pagination**  
+  - Books are displayed five per page for easier browsing with Kaminari.  
+
+- **Responsive Design**  
+  - Built with Bootstrap 5 for a modern, mobile-friendly UI.  
+
+- **Scalability Ready**  
+  - Includes Solid Queue, Solid Cache, and Solid Cable gems for background jobs, caching, and real-time updates.  
 
 ---
 
 ## Real-World Use Case
 
-Imagine you’ve accumulated a home library of over 300 books. You’ve tried spreadsheets, but it quickly becomes hard to maintain, and you often forget whether you already own a book when browsing at the store.
+Imagine you have a personal collection of hundreds of books scattered across shelves, boxes, and maybe even different rooms. You often find yourself:  
 
-With Book Catalog, you can:
+- Forgetting if you already own a book while shopping.  
+- Struggling to quickly find all books by a certain author.  
+- Losing track of books you’ve lent or donated.  
 
-Quickly add books to your catalog with details like title, author, genre, and publication date.
+**Book Catalog solves this problem.**  
 
-Filter your collection by title, author, or genre to find books instantly. For example, search “Agatha Christie” to view only her books, or filter by “Science Fiction” to browse just that genre.
+- Add every book you own with its details.  
+- Quickly filter your catalog to see all books by *Agatha Christie* or just the *Science Fiction* genre.  
+- Browse your library in neat groups of 5 books per page — no overwhelming scrolling.  
+- Edit entries when you update editions or fix errors.  
+- Delete books when they’re no longer in your collection.  
+- Rest assured: your catalog is private and separate from all other users.  
 
-Use pagination to view your collection in manageable chunks (five books per page), avoiding overwhelming, endless scrolling.
-
-Edit or update book details if you get a new edition or want to fix an error.
-
-Delete books you’ve sold, donated, or no longer want in your catalog.
-
-Keep your data private: each user only sees their own books, with no accidental sharing.
-
-Over time, your Book Catalog becomes your go-to library tracker, letting you know exactly what you own and helping you avoid duplicate purchases.
+Over time, your Book Catalog becomes your personal library system, helping you avoid duplicate purchases and keeping your collection organized.
 
 ---
 
 ## Technologies Used
 
-- Ruby 3.3.8  
-- Rails 8.0.2  
-- PostgreSQL  
-- Bootstrap 5  
-- Devise for authentication  
-- Kaminari for pagination  
-- Solid Queue, Solid Cache, and Solid Cable  
-- RSpec for testing (optional)  
-- Heroku for deployment  
+- **Ruby** 3.3.8  
+- **Rails** 8.0.2  
+- **PostgreSQL** (primary database)  
+- **Bootstrap 5** for styling  
+- **Devise** for user authentication  
+- **Kaminari** for pagination  
+- **Solid Queue**, **Solid Cache**, **Solid Cable** for jobs, caching, and real-time support  
+- **RSpec** for testing (optional)  
+- **Heroku** for deployment  
 
 ---
 
@@ -86,9 +99,18 @@ Follow the steps below to run the application locally.
 
 ### Prerequisites
 
+Make sure you have the following installed:
+
 - Ruby 3.3.8  
 - Rails 8.0.2  
-- PostgreSQL (version 14 or later recommended)  
-- Node.js and Yarn (for asset compilation)  
-- Bundler (install with "gem install bundler")
+- PostgreSQL (v14 or newer recommended)  
+- Node.js and Yarn (for handling JavaScript assets)  
+- Bundler ("gem install bundler" if you don't have it already)  
 
+### Installation
+
+1. Clone the repository:
+
+   => bash 
+   git clone <your-repo-url>
+   cd book_catalog
