@@ -4173,3 +4173,196 @@ Processing by PagesController#home as HTML
 Completed 200 OK in 59ms (Views: 3.6ms | ActiveRecord: 27.9ms (1 query, 0 cached) | GC: 0.0ms)
 
 
+Started GET "/" for ::1 at 2025-07-29 19:57:42 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='BookCatalog'*/[0m
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.6ms | GC: 0.0ms)
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 2 ORDER BY "users"."id" ASC LIMIT 1 /*action='home',application='BookCatalog',controller='pages'*/[0m
+  ↳ app/views/layouts/application.html.erb:67
+  Rendered layout layouts/application.html.erb (Duration: 60.2ms | GC: 9.1ms)
+Completed 200 OK in 109ms (Views: 20.1ms | ActiveRecord: 42.2ms (1 query, 0 cached) | GC: 9.1ms)
+
+
+Started GET "/" for ::1 at 2025-07-29 19:57:44 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.3ms | GC: 0.0ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 2 ORDER BY "users"."id" ASC LIMIT 1 /*action='home',application='BookCatalog',controller='pages'*/[0m
+  ↳ app/views/layouts/application.html.erb:67
+  Rendered layout layouts/application.html.erb (Duration: 2.9ms | GC: 0.0ms)
+Completed 200 OK in 30ms (Views: 2.6ms | ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for ::1 at 2025-07-29 21:26:27 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='BookCatalog'*/[0m
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.0ms | GC: 0.0ms)
+  [1m[36mUser Load (4.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 2 ORDER BY "users"."id" ASC LIMIT 1 /*action='home',application='BookCatalog',controller='pages'*/[0m
+  ↳ app/views/layouts/application.html.erb:67
+  Rendered layout layouts/application.html.erb (Duration: 63.0ms | GC: 9.3ms)
+Completed 200 OK in 121ms (Views: 22.3ms | ActiveRecord: 43.2ms (1 query, 0 cached) | GC: 9.3ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2025-07-29 21:27:00 +0100
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 2 ORDER BY "users"."id" ASC LIMIT 1 /*action='destroy',application='BookCatalog',controller='sessions'*/[0m
+Redirected to http://localhost:3000/
+Completed 303 See Other in 36ms (ActiveRecord: 1.7ms (1 query, 0 cached) | GC: 0.7ms)
+
+
+Started GET "/" for ::1 at 2025-07-29 21:27:01 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.3ms | GC: 0.0ms)
+Completed 200 OK in 19ms (Views: 1.5ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2025-07-29 21:27:03 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 13.2ms | GC: 2.1ms)
+  Rendered layout layouts/application.html.erb (Duration: 13.6ms | GC: 2.1ms)
+Completed 200 OK in 43ms (Views: 16.0ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 2.1ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2025-07-29 21:27:28 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered devise/shared/_links.html.erb (Duration: 0.5ms | GC: 0.0ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 4.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.6ms | GC: 0.0ms)
+Completed 200 OK in 31ms (Views: 6.0ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2025-07-29 21:27:50 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 1.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.5ms | GC: 0.0ms)
+Completed 200 OK in 35ms (Views: 3.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2025-07-29 21:27:54 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered devise/shared/_links.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 1.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.7ms | GC: 0.0ms)
+Completed 200 OK in 24ms (Views: 2.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2025-07-29 21:27:55 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 0.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.0ms | GC: 0.0ms)
+Completed 200 OK in 46ms (Views: 1.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 18.8ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2025-07-29 21:28:01 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"[FILTERED]", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = 'ketheleenbazan@gmail.com' ORDER BY "users"."id" ASC LIMIT 1 /*action='create',application='BookCatalog',controller='sessions'*/[0m
+Redirected to http://localhost:3000/books
+Completed 303 See Other in 302ms (ActiveRecord: 2.5ms (1 query, 0 cached) | GC: 1.0ms)
+
+
+Started GET "/books" for ::1 at 2025-07-29 21:28:01 +0100
+Processing by BooksController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 2 ORDER BY "users"."id" ASC LIMIT 1 /*action='index',application='BookCatalog',controller='books'*/[0m
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (4.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."user_id" = 2 LIMIT 5 OFFSET 0 /*action='index',application='BookCatalog',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:39
+  [1m[36mBook Count (4.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "books" WHERE "books"."user_id" = 2 /*action='index',application='BookCatalog',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:59
+  Rendered books/index.html.erb within layouts/application (Duration: 20.6ms | GC: 0.7ms)
+  Rendered layout layouts/application.html.erb (Duration: 21.2ms | GC: 0.7ms)
+Completed 200 OK in 59ms (Views: 13.7ms | ActiveRecord: 17.4ms (3 queries, 0 cached) | GC: 1.0ms)
+
+
+Started GET "/books/6" for ::1 at 2025-07-29 21:30:19 +0100
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 2 ORDER BY "users"."id" ASC LIMIT 1 /*action='show',application='BookCatalog',controller='books'*/[0m
+  [1m[36mBook Load (0.6ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."user_id" = 2 AND "books"."id" = 6 LIMIT 1 /*action='show',application='BookCatalog',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:67:in `set_book'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 1.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.0ms | GC: 0.0ms)
+Completed 200 OK in 39ms (Views: 2.3ms | ActiveRecord: 1.6ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books/6/edit" for ::1 at 2025-07-29 21:30:25 +0100
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 2 ORDER BY "users"."id" ASC LIMIT 1 /*action='edit',application='BookCatalog',controller='books'*/[0m
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."user_id" = 2 AND "books"."id" = 6 LIMIT 1 /*action='edit',application='BookCatalog',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:67:in `set_book'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/_form.html.erb (Duration: 15.8ms | GC: 0.0ms)
+  Rendered books/edit.html.erb within layouts/application (Duration: 16.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 34.0ms | GC: 14.7ms)
+Completed 200 OK in 61ms (Views: 34.4ms | ActiveRecord: 0.7ms (2 queries, 0 cached) | GC: 14.7ms)
+
+
+Started GET "/books/6" for ::1 at 2025-07-29 21:30:32 +0100
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 2 ORDER BY "users"."id" ASC LIMIT 1 /*action='show',application='BookCatalog',controller='books'*/[0m
+  [1m[36mBook Load (1.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."user_id" = 2 AND "books"."id" = 6 LIMIT 1 /*action='show',application='BookCatalog',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:67:in `set_book'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 0.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.0ms | GC: 0.9ms)
+Completed 200 OK in 39ms (Views: 2.3ms | ActiveRecord: 1.9ms (2 queries, 0 cached) | GC: 0.9ms)
+
+
+Started DELETE "/books/6" for ::1 at 2025-07-29 21:30:35 +0100
+Processing by BooksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"6"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 2 ORDER BY "users"."id" ASC LIMIT 1 /*action='destroy',application='BookCatalog',controller='books'*/[0m
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."user_id" = 2 AND "books"."id" = 6 LIMIT 1 /*action='destroy',application='BookCatalog',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:67:in `set_book'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*action='destroy',application='BookCatalog',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:59:in `destroy'
+  [1m[36mBook Destroy (2.4ms)[0m  [1m[31mDELETE FROM "books" WHERE "books"."id" = 6 /*action='destroy',application='BookCatalog',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:59:in `destroy'
+  [1m[36mTRANSACTION (4.4ms)[0m  [1m[35mCOMMIT /*action='destroy',application='BookCatalog',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:59:in `destroy'
+Redirected to http://localhost:3000/books
+Completed 303 See Other in 49ms (ActiveRecord: 7.6ms (3 queries, 0 cached) | GC: 0.5ms)
+
+
+Started GET "/books" for ::1 at 2025-07-29 21:30:35 +0100
+Processing by BooksController#index as HTML
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 2 ORDER BY "users"."id" ASC LIMIT 1 /*action='index',application='BookCatalog',controller='books'*/[0m
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.7ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."user_id" = 2 LIMIT 5 OFFSET 0 /*action='index',application='BookCatalog',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:39
+  [1m[36mBook Count (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "books" WHERE "books"."user_id" = 2 /*action='index',application='BookCatalog',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:59
+  Rendered books/index.html.erb within layouts/application (Duration: 9.3ms | GC: 0.5ms)
+  Rendered layout layouts/application.html.erb (Duration: 10.4ms | GC: 1.0ms)
+Completed 200 OK in 40ms (Views: 9.4ms | ActiveRecord: 3.5ms (3 queries, 0 cached) | GC: 1.7ms)
+
+

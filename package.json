@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "@popperjs/core": "^2.11.8",
-    "bootstrap": "^5.3.7"
+    "bootstrap": "^5.3.7",
+    "mermaid": "^11.9.0"
   }
 }
