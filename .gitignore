@@ -8,6 +8,7 @@ ai_files/
 .vscode/
 .vscode-insiders/
 *.code-workspace
+.vscode/settings.json
 
 # VSCode extensions cache
 .vscode-test/
