@@ -1,2 +1,25 @@
 # VSCode workspace settings (contains local API keys, paths…)
 .vscode/settings.json
+
+# Ignore environment files
+.env*
+config/master.key
+config/credentials/*.key
+
+# Ignore logs and temp files
+log/*
+tmp/*
+!/log/.keep
+!/tmp/.keep
+
+# Ignore storage
+storage/*
+!/storage/.keep
+tmp/storage/*
+!/tmp/storage/.keep
+
+# Ignore node and assets
+node_modules/
+app/assets/builds/*
+!/app/assets/builds/.keep
+public/assets
