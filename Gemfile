@@ -13,7 +13,7 @@ gem "ransack"
 gem "kaminari"
 
 # Rails framework (main framework for the application)
-gem "rails", "~> 8.0.1"
+gem "rails", "~> 8.0.2"
 
 # Modern asset pipeline for handling CSS/JS/images
 gem "propshaft"
